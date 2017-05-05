@@ -1,0 +1,62 @@
+
+.menu select {
+  margin: 0;
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+ .menu-text textarea {
+  margin: 0;
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+.menu .menu-text {
+  margin: 0;
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+.menu .title::before {
+  content: '▶ ';
+  font-size: 80%;
+  color: green;
+}
+
+ .menu-text .title-other::before{
+   content: '▶ ';
+  font-size: 80%;
+  color: green;
+}
+
+.menu.open .title::before {
+  content: '▼ ';
+}
+
+ .menu-text.opencase .title-other::before {
+  content: '▼ ';
+}
+.menu.open select {
+  display: block;
+}
+.menu.open .menu-text {
+  display: block;
+}
+.menu-text.opencase title-other {
+  display: block;
+}
+
+.menu-text.opencase textarea {
+  display: block;
+}
+
+.menu .title {
+      font-size: 15px;
+      cursor: pointer;
+    }
+  
+  .menu-text .title-other {
+      font-size: 15px;
+      cursor: pointer;
+    }

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Drive</title>
+    <link rel="stylesheet" type="text/css" href="сss/coffe.css">
+</head>
+<body>
+<div id="container">
+  <header class = "main-header">
+    <div class = "main-logo"><img src = "img/main-logo.jpg" width = "368"  heght = "264" alt = "Coffe Drive"></div>
+  </header>
+  <nav id="navigation">
+    <ul>
+     <li><a href = "#">Главная </a></li>
+     <li><a href = "#">Напитки и цены</a></li>
+     <li><a href = "#">О доставке</a></li>
+     <li><a href = "#">Контакты</a></li>
+    </ul>
+  </nav>
+   <main class = "content">
+      <div class="description">
+          <h2>О кофейне</h2>
+              <article>В больших городах жизнь бурлит по черному. Напряг везде и повсюду
+              Порой изнемогаешь в пробке, а вчера тебя задержали на работе до поздна.
+              Ты понимаешь , енергии после такой нагрузки не хватит, к тому же недосып обеспечен.
+              Наступило утро, будильник был проигнорен, а времени остается на то, чтобы собратся и выскочить на улицу, так и не выпив  <b>кофейца</b> 
+              Не нужно по пути на работу вспешке искать кофейню или любой другой доступный вариант получения кофе - оставте этот опыт всяк сюда входящий.
+              <i>Coffee Drive - кофейня нового поколения</i></article>
+              <section class = "advantages">
+                  <h4>Инновационный подход в продаже кофе</h4>
+                  <p>Теперь не вы ищете кофе, а кофе ищет вас </p>
+                      <div class = "advantages-item">     
+                          <div class ="advantages-title"><span>Мобильность</span></div>
+                          <div class = "advantages-introtext">Наши доставщики по совместительству и баристы доставят вам кофе без привязки к месту</div>
+                      </div>
+                      <div class = "advantages-item">
+                          <div class = "advantages-title"> <span>Транспорт</span></div>
+                          <div class = "advantages-introtext"> Только у нас транспорт на все случаи доставки</div>
+                      </div>
+                      <div class = "advantages-item">
+                          <div class = "advantages-title"><span>Навигация</span></div>
+                          <div class = "advantages-introtext">Навигация происходит в режиме онлайн с динамическим присваиванием координат условного места встречи</div>
+                     </div>
+              </section>
+      </div>
+      <div class = "index-order">
+          <div class = "index-order-person" ><h2>Бланк заказа кофе</h2> <!--Заглавие и короткие текстовые блоки в одну строку с родительным тегом-->
+        
+            <form action="php/input2.php" method="post" name = "form1">
+                 <div class = "index-order-drink"> <h3>Здесь можно выбрать желаемый вами напиток и другие позиции</h3>
+                     <fieldset><legend>Напиток и количество</legend>
+                     <div id ="index-order-drink-coffee" class = "menu"><span class="title"  style="border: solid blue 1px">Выберите кофейный напиток!</span>
+                         <select id =  "index-order-drink-coffe-itemcoffee" class = "turnintodropdown" size="5" multiple name="item-coffee" required> 
+                     <!--это не тег а значение--><!--использовать псевдокласс hover-->
+                            <optgroup label = "Напитки">
+                            <option label = "1" value="1">Эспрессо</option>
+                            <option label = "2" value="2">Американо</option>
+                            <option label = "3" value="3">Лате</option>
+                            <option label = "4" value="4">Капуччино</option>
+                            <option label = "5" value = "5">Cпецзаказ</option>
+                            </optgroup>
+                         </select>
+                         <div id = "index-order-drink-coffee-text" class ="menu-text"><span class = "title-other"><b>Поле для создания спецзаказа</b> </span>
+                              <textarea rows="5" cols="15" name = "textchoosedrink" >Введите текст</textarea>
+                         </div>
+                         <div class = "index-order-drink-сount"><p>Задайте количество выбранного напитка</p>
+                             <input type="range" min="0" max="10" step="1" name = "count1" value = "0"/><br/>
+                             <input type="range" min="0" max="10" step="1" name = "count2" value = "0"/><br/>
+                             <input type="range" min="0" max="10" step="1" name = "count3" value = "0"/><br/>
+                             <input type="range" min="0" max="10" step="1" name = "count4" value = "0"/><br/>
+                             <input type="range" min="0" max="10" step="1" name = "count5" value = "0"/><br/>
+                         </div>
+                     </div>
+                     </fieldset>
+                     <fieldset><legend>Укажите район, маршрут, и свое текущее рассположение</legend>
+                         <label for="check1">Район:<input type "text" name "district" id ="check1" /></label><br/>
+                     </fieldset>
+                 </div>
+                 <div> 
+                 </div>
+                 <label>            
+                 Имя:  <input type="text" name="username" placeholder = "Например: Олексей" /><br />
+            Email:<input type="email" name="email1" id = "textfield" /><br /> <!-- id- уникальное имя элемента, которое используется для изменения его стиля и обращения к нему через скрипты. 
+            Идентификатор в коде документа должен быть в единственном экземпляре, иными словами, встречаться только один раз.-->
+Контактный телефон:<input type = "tel" name ="phonenumber"/><br/>
+                  <input type="submit" name="button" id "submit" value="Отправить" />
+                 </label>
+            </form>
+          </div>
+      </div>
+   </main>
+   <footer>
+   </footer>
+</div>
+<script>
+    var menuElem = document.getElementById('index-order-drink-coffee');//menu+div_id, мне надо меню +
+    var titleElem = menuElem.querySelector('.title');
+    
+    titleElem.onclick = function() {
+      menuElem.classList.toggle('open');
+    };
+    
+    var menutextElem = document.getElementById('index-order-drink-coffee-text');
+    var titleotherElem = menuElem.querySelector('.title-other');
+
+    
+    titleotherElem.onclick = function() {
+      menutextElem.classList.toggle('opencase');
+    };
+</script>
+</body>
+
+</html>
